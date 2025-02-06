@@ -1,7 +1,7 @@
 # Quantum-Stock-Predictor
 
 
-**Problem Statement**
+*Problem Statement*
 Stock market prediction is a challenging taks as vast amount of influencing factos to correctly make predictions. 
 
 
