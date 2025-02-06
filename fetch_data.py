@@ -7,7 +7,7 @@ def get_data(ticker):
     stock = yf.Ticker(ticker)
     historical_data = stock.history(period='1mo', interval='1d')        
 
-    with open(f"{ticker}_stock_data.txt", 'w') as f:
+    with open(f"/temp_stock_data/{ticker}_stock_data.txt", 'w') as f:
 
         f.write(f"{ticker} Stock Data for the Last Month:\n")
         f.write(historical_data[['Open', 'High', 'Low', 'Close', 'Volume']].to_string())

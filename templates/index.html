@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StockData</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="heading">
+        <h1>Real Time Stock Data</h1>
+        <p>*This is stock data based on the <a href="https://pypi.org/project/yfinance/" target="_blank">Yahoo Finance API</a></p>
+    </div>
+
+    <div class="input">
+        <form method="POST">
+            <input type="text" name="stock_name" placeholder="Enter stock ticker (e.g., AAPL)" required>
+            <button type="submit">Search</button>
+        </form>
+    </div>
+
+    <div class="main">
+        {% if stock_name %}
+            <h2>Stock Data for {{ stock_name }}</h2>
+            <h3>Historical Data (Last Month)</h3>
+            <div>{{ stock_data | safe }}</div>
+
+            <h3>Financials</h3>
+            <div>{{ financials | safe }}</div>
+
+            <h3>Stock Actions</h3>
+            <div>{{ actions | safe }}</div>
+        {% endif %}
+    </div>
+</body>
+</html>
