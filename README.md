@@ -49,8 +49,5 @@ Explore potential applications in algorithmic trading.
 
 Contributors
 
-[Your Name]
+Ivan Mendez
 
-License
-
-This project is licensed under the MIT License.
