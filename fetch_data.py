@@ -5,7 +5,7 @@ import pandas as pd
 
 def get_data(ticker):
     stock = yf.Ticker(ticker)
-    historical_data = stock.history(period='1mo', interval='1d')        
+    historical_data = stock.history(period='3mo', interval='1d')        
 
     with open(f"/temp_stock_data/{ticker}_stock_data.txt", 'w') as f:
 
